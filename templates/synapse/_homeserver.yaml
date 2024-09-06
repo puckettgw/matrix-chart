@@ -832,7 +832,7 @@ url_preview_ip_range_whitelist:
 
 {{- if .Values.matrix.urlPreviews.rules.url.blacklist }}
 url_preview_url_blacklist:
-{{ include .Values.matrix.urlPreviews.rules.url.blacklist . | nindent 2 }}
+{{ toYaml .Values.matrix.urlPreviews.rules.url.blacklist | nindent 2 }}
 {{- end }}
 
 # The largest allowed URL preview spidering size in bytes
